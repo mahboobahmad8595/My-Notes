@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کتاب الطھارة</title>
+  <link rel="stylesheet" href="../../../pages.css">
+  <style>
+ /* Default 3x3 grid (desktop) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  height: calc(100vh - 150px); /* header + footer minus */
+  padding: 20px;
+}
+
+/* Card styling */
+.book-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* 📱 Mobile view: 730px se neeche */
+/* 📱 Mobile view: 730px se neeche */
+@media (max-width: 730px) {
+  
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.book-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.book-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background-color: #E5E7EB;
+}
+
+.book-card h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #1f2937;
+    font-family: amiri;
+}
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+      <h1>📚 Taharat</h1>
+      <a href="../../../index.html" class="back-btn">← Back to Library</a>
+      <a href="../../fiqh/fiqh.html" class="back-btn">← Back to Fiqh</a>
+      <button id="themeToggle">🌙 Dark Mode</button>
+  </header>
+  
+  <main>    
+    <div class="container">
+
+        <a href="./wudu/wudu.html" class="book-card b1">
+            <h3>وضو</h3>
+        </a>
+        <a href="./taruf e taharat/tarufetaharat.html" class="book-card b2">
+            <h3>تعارف طھارة</h3>
+        </a>
+        <a href="./ghusal/ghusul.html" class="book-card b3">
+            <h3>غسل</h3>
+        </a>
+        <a href="./masha alal khufain/mashaalalkhufain.html" class="book-card b4">
+            <h3>مسح علی الخفین</h3>
+        </a>
+        <a href="./tayamum/tayamum.html" class="book-card b5">
+            <h3>تیمم</h3>
+        </a>
+        <a href="./nijasat/nijasat.html" class="book-card b6">
+            <h3>نجاست</h3>
+        </a>
+        <a href="./haiz o nifaas/haizonifaas.html" class="book-card b7">
+            <h3>حیض و نفاس</h3>
+        </a>
+        <a href="./shari mazoor/sharimazoor.html" class="book-card b8">
+            <h3>شرعی معزور</h3>
+        </a>
+        <a href="./pani/pani.html" class="book-card b9">
+            <h3>پانی</h3>
+        </a>
+        
+    </div>
+  </main>
+  
+  <footer>
+    © 2025 Mahboob Books Library
+  </footer>
+
+</body>
+</html>
+
+
+    <script>
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+
+        // page load par localStorage check karo
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            root.classList.add('dark');
+            if (themeToggle) themeToggle.textContent = "☀️ Light Mode";
+        }
+
+        // agar button exist karta hai (sirf index.html me hoga)
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                const isDark = root.classList.toggle('dark');
+                themeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        }
+    </script>

@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+}
+
+header {
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(6, 50px);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #E5E7EB;
+}
+
+.book-card h3 {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #1f2937;
+    font-family: amiri;
+}
+
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*! Resposive */
+
+@media(max-width: 730px) {
+
+    #themeToggle {
+    position: relative;
+    right: 0rem;
+    top: 0.5rem;
+    }
+    
+    .small-none {
+        display: none;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .b1 {
+        order: 1;
+    }
+
+    .b2 {
+        order: 2;
+    }
+
+    .b3 {
+        order: 3;
+    }
+
+    .b4 {
+        order: 4;
+    }
+
+    .b5 {
+        order: 5;
+    }
+
+    .b6 {
+        order: 6;
+    }
+
+    .b7 {
+        order: 7;
+    }
+
+    .b8 {
+        order: 8;
+    }
+
+    .b9 {
+        order: 9;
+    }
+
+    .b10 {
+        order: 10;
+    }
+
+    .b11 {
+        order: 11;
+    }
+
+    .b12 {
+        order: 12;
+    }
+
+    .b13 {
+        order: 13;
+    }
+
+    .b14 {
+        order: 14;
+    }
+
+    .b15 {
+        order: 15;
+    }
+
+    .b16 {
+        order: 16;
+    }
+
+    .b17 {
+        order: 17;
+    }
+
+    .b18 {
+        order: 18;
+    }
+
+}
