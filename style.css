@@ -19,7 +19,7 @@ header h1 {
 
 .container {
     display: grid;
-    grid-template-rows: repeat(6, 50px);
+    grid-template-rows: repeat(6, 80px);
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
@@ -60,24 +60,28 @@ a {
     text-decoration: none;
 }
 
-
-/*! Resposive */
+/*! Mobile Screen */
 
 @media(max-width: 730px) {
 
     #themeToggle {
-    position: relative;
-    right: 0rem;
-    top: 0.5rem;
+        position: relative;
+        right: 0rem;
+        top: 0.5rem;
     }
-    
+
     .small-none {
         display: none;
     }
-    
+
     .container {
         display: flex;
+        align-items: center;
         flex-flow: column nowrap;
+    }
+
+    a {
+        width: 80%;
     }
 
     .b1 {
