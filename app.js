@@ -33,3 +33,5 @@ if (charIndex === currentText.length) {
 }
 
 typeEffect();
+
+
